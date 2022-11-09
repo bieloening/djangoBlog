@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+        <div><a href="#">BLOG</a></div>
+            <ul>
+                <li><a href="#publicacao_1">Publicação 1</a></li>
+                <li><a href="#publicacao_2">Publicação 2</a></li>
+               <li><a href="#publicacao_3">Publicação 3</a></li>
+               
+               
+
+               
+            </a>
+        </li>
+        <div id="tela_cadastrar_publicacao">
+            <a href="{% url 'cadastrarPub' %}"><i class="fa-solid fa-circle-info"></i>
+            </div>
+    </ul>  
+        
+        </nav> 
+    </header>
+
+        <section id="publicacao_1">
+            
+            <div id="paragrafo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum numquam rerum natus perspiciatis unde debitis quas nisi distinctio repellat accusantium culpa voluptatibus porro alias ad nesciunt, nam nostrum. Nam, quas.</p>
+            </div>
+
+            <div id="page">
+                <img id="imgBart" src="/img/Bart.png" alt=""> 
+             </div> 
+        </section>
+
+        <section id="publicacao_2">
+            <h1>Publicação 2</h1>
+        </section>
+
+        <section id="publicacao_3">
+            <h1>Publicação 3</h1>
+        </section>
+
+    <form action="coments">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <div class="container body-content">
+        <footer class="fixarRodape">
+            <hr />
+            <p>&copy; Gabriel</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
