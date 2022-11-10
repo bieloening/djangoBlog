@@ -6,7 +6,7 @@ from . import views
 from django.contrib import auth
 
 urlpatterns = [
-    
+    path('', views.inicio, name='home')
 
 
 ]

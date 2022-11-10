@@ -75,7 +75,7 @@ nav ul li a:hover{
 }
 
 
-nav #tela_informacao a:hover{
+nav #tela_cadastrar_publicacao a:hover{
     background-color: #161616 ;
     transition: 0.5s;
     color: white;
