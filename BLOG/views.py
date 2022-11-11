@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Publicacoes
 
 def inicio(request):
-    return render(request, 'inicio.html')
+    publicacoes = Publicacoes.objects.all()
+    return render(request, 'inicio.html', {'publicacoes':publicacoes})
