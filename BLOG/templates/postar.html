@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteudo Blog</title>
+    <link rel="stylesheet" href="{% static 'postar.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+    <form id="pagina" action="" method="post">
+        <header id="titulo">
+            <h1 id="tituloBlog">Titulo Blog</h1>
+            <div id="links">
+                <a id="inicio" href="">Inicio</a>
+                <div id="categorias">
+                    <legend>Categorias</legend>
+                    <select name="escolher" id="escolher">
+                        <option disabled selected>Selecione</option>
+                        <option value="categoria"><a href="">Categoria</a></option>
+                        <option value="categoria1">Ação</option>
+                        <option value="categoria2">Comédia</option>
+                        <option value="categoria3">Terror</option>
+                        <option value="categoria4">Ficção cientifica</option>
+                        <option value="categoria5">Suspense</option>
+                    </select>
+                </div>
+
+                <div id="postar2">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Postar</p>
+                </div>
+            </div>
+
+            <div id="logar">
+                <i id="usuario" class="fa-solid fa-user"></i>
+                <p id="cadastro">Logar ou Cadastrar</p>
+            </div>
+        </header>
+        <section>
+            <div id="publicacao">
+                <h3 id="titulo2">Título Publicação</h3>
+                <hr>
+                <div id="paragrafo">
+                    <p><br> Minions ipsum poopayee baboiii bee do bee do bee do. Bananaaaa tatata bala tu underweaaar
+                        belloo!
+                        Daa pepete ti aamoo! Poopayee bappleees. Me want bananaaa! tatata bala tu ti aamoo! Tatata bala
+                        tu potatoooo aaaaaah
+                        poulet tikka pepete hahaha. Bananaaaa poulet tikka masala bee do bee do bee do hahaha gelatooo
+                        jiji jeje poopayee
+                        uuuhhh poopayee.</p>
+
+                    <p> <br> Underweaaar pepete hana dul sae hahaha tatata bala tu tatata bala tu. Para tú bappleees
+                        jiji
+                        hahaha
+                        hahaha poulet tikka masala jiji hahaha po kass belloo! Me want bananaaa! bee do bee do bee do me
+                        want
+                        bananaaa! Gelatooo want bananaaa! Me want bananaaa! Bee do bee do bee do jeje wiiiii aaaaaah.
+                        Pepete poopayee hahaha
+                        poopayee la tulaliloo ti aamoo! Tatata bala tu jeje.</p>
+
+                    <p><br> Jiji baboiii baboiii aaaaaah tatata bala tu bananaaaa chasy chasy hahaha. Poopayee tatata
+                        bala tu
+                        ti
+                        aamoo! Poopayee. Bananaaaa me want bananaaa! Bee do bee do bee do chasy. Tulaliloo tulaliloo
+                        underweaaar bappleees
+                        butt jiji bananaaaa potatoooo me want bananaaa! Bee do bee do bee do. Jeje belloo! Aaaaaah daa
+                        poulet tikka masala daa
+                        bananaaaa daa me want bananaaa! Jiji. Uuuhhh tulaliloo baboiii pepete poopayee aaaaaah
+                        underweaaar jeje po kass wiiiii.</p>
+
+                </div>
+                <div>
+                    <main>
+                        <nav>
+                            <h1>Novas Postagem</h1>
+                            <!-- <ul>
+                                <li>{{user}}</li>
+                                <li><a href="">Sair</a></li>
+                            </ul> -->
+                        </nav>
+                        <section>
+                            <form method="POST" action="{% url 'adicionar_informacao' %}"> {% csrf_token %}
+                                <p id="titulo_post">Título da Postagem</p>
+                                <input name="titulo_post" type="text">
+
+                                <p>Descrição</p>
+                                <textarea name="descricao_post" id="descricao_post" cols="30" rows="10"></textarea>
+
+                                <img src="https://www.coxinhanerd.com.br/wp-content/uploads/2016/03/DICADELIVRO-LIVRO-DE-MARCAR-FILMES.png"
+                                    alt="">
+
+                                <p>Imagem</p>
+                                <input name="imagem_post" type="image">
+                                <button type="submit">Enviar</button>
+
+                                <p>Data</p>
+                                <input name="data_post" type="date">
+                                <p>Autor</p>
+                                <input name="autor_post" type="text">
+
+                                <button type="submit">Adicionar</button>
+                            </form>
+                        </section>
+                    </main>
+                </div>
+                <hr>
+                <span>
+                    <p id="autor">Autor | Data e hora</p>
+                </span>
+            </div>
+            <div class="">
+
+            </div>
+            <div id="comentarios">
+                <h3>Comentario</h3>
+                <span id="caixa">
+                    <textarea name="caixa_comentario" id="caixa_comentario" cols="30" rows="10"></textarea>
+                    <button id="post_comentario" type="submit">Comentar</button>
+                </span>
+
+                <span id="postar_comentario">
+                    <div>
+                        <p>iji baboiii baboiii aaaaaah tatata bala tu bananaaaa chasy chasy hahaha. Poopayee tatata bala
+                            tu
+                            ti aamoo! Poopayee. Bananaaaa me want bananaaa! Bee do bee do bee do chasy. Tulaliloo
+                            tulaliloo
+                            underweaaar bappleees butt jiji bananaaaa potatoooo me want bananaaa! Bee do bee do bee do.
+                        </p>
+                    </div>
+                    <hr>
+                    <p>Autor | Data e hora</p>
+
+                </span>
+            </div>
+        </section>
+
+    </form>
+</body>
+
+</html>

@@ -17,9 +17,9 @@
       <nav>
         <div><a href="#">FILMS</a></div>
         <ul>
-          <li><a href="#categoria_1">Ação</a></li>
-          <li><a href="#categoria_2">Animações</a></li>
-          <li><a href="#categoria_3">Comédia</a></li>
+          <li><a href="#categoria">Ação</a></li>
+          <li><a href="#categoria">Animações</a></li>
+          <li><a href="#categoria">Comédia</a></li>
         </ul>
 
         <div id="tela_cadastrar_publicacao">
@@ -29,11 +29,11 @@
     </header>
 
     {% for publicacao in publicacoes %}
-    <section id="categoria_1">
+    <section id="categoria">
       <h1>{{publicacao.titulo}}</h1>
-      <img id="image" src="{{publicacao.imagem.url}}" alt="">
+      <img id="image" src="{{publicacao.imagem.url}}" alt="" />
       <p>{{publicacao.descricao}}</p>
-      </section>
+    </section>
     {% endfor %}
 
     <form action="coments" id="comentarios">

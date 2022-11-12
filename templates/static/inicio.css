@@ -92,9 +92,11 @@ section{
     min-height: 100vh;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     color: black;
+    padding: 120px;
 }
 
 section h1{
@@ -130,5 +132,10 @@ img{
     text-align: center;
     padding: 3% 0;
     color: black;
+}
+
+#image{
+    width: 350px;
+    height: 350px ;
 }
 
