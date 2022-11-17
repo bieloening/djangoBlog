@@ -13,7 +13,7 @@ def user_login(request):
             auth.login(request, check)
             return redirect('home')
         else:
-            return redirect('logar')
+            return redirect('login')
 
     else:
         return render(request, 'logar.html')

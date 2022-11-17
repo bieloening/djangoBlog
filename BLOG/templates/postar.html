@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form id="pagina" action="" method="post">
+    <form id="pagina" action="" method="POST">
         <header id="titulo">
             <h1 id="tituloBlog">Titulo Blog</h1>
             <div id="links">
@@ -85,7 +85,7 @@
                             </ul> -->
                         </nav>
                         <section>
-                            <form method="POST" action="{% url 'adicionar_informacao' %}"> {% csrf_token %}
+                            <form method="POST" enctype="multipart/form-data" action="{% url 'home' %}"> {% csrf_token %}
                                 <p id="titulo_post">Título da Postagem</p>
                                 <input name="titulo_post" type="text">
 

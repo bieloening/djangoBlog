@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Publicacoes(models.Model):
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=255)
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to='pub_img')
     descricao = models.TextField(max_length=255)
     criado_em = models.DateField()
 

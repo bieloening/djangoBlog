@@ -6,6 +6,6 @@ from . import views
 from django.contrib import auth
 
 urlpatterns = [
-    path('logar/', views.user_login, name='logar'),
+    path('login/', views.user_login, name='login'),
 
 ]
