@@ -5,17 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Estudio Filmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteudo Blog</title>
     <link rel="stylesheet" href="{% static 'postar.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 </head>
 
 <body>
-    <form id="pagina" action="" method="post">
+    <form id="pagina" action="" method="POST">
         <header id="titulo">
             <h1 id="tituloBlog">Titulo Blog</h1>
             <div id="links">
@@ -81,38 +79,38 @@
                     <main>
                         <nav>
                             <h1>Novas Postagem</h1>
-
+                            <!-- <ul>
+                                <li>{{user}}</li>
+                                <li><a href="">Sair</a></li>
+                            </ul> -->
                         </nav>
                         <section>
-                            <form method="POST" action="{% url 'home' %}"> {% csrf_token %}
+                            <form method="POST" enctype="multipart/form-data" action="{% url 'home' %}"> {% csrf_token %}
                                 <p id="titulo_post">Título da Postagem</p>
-                                <input id="titulo_input" name="titulo_post" type="text">
+                                <input name="titulo_post" type="text">
 
-                                <p id="descricao">Descrição</p>
+                                <p>Descrição</p>
                                 <textarea name="descricao_post" id="descricao_post" cols="30" rows="10"></textarea>
 
-                                
-
-                                <!-- <img src="https://www.coxinhanerd.com.br/wp-content/uploads/2016/03/DICADELIVRO-LIVRO-DE-MARCAR-FILMES.png"
-                                    alt=""> -->
+                                <img src="https://www.coxinhanerd.com.br/wp-content/uploads/2016/03/DICADELIVRO-LIVRO-DE-MARCAR-FILMES.png"
+                                    alt="">
 
                                 <p>Imagem</p>
                                 <input name="imagem_post" type="file">
+                                
 
-                                <p class="info_postagem">Data</p>
-                                <input id="bt_data" name="data_post" type="date">
+                                <p>Data</p>
+                                <input name="data_post" type="date">
+                                
 
-                                <p class="info_postagem">Autor</p>
-                                <input id="bt_autor" name="autor_post" type="text">
-
-                                <button id="bt_salvar" type="submit">Salvar</button>
+                                <button type="submit">Adicionar</button>
                             </form>
                         </section>
                     </main>
                 </div>
                 <hr>
                 <span>
-                    <p id="autor">Autor | Data</p>
+                    <p id="autor">Autor | Data e hora</p>
                 </span>
             </div>
             <div class="">
@@ -122,13 +120,12 @@
                 <h3>Comentario</h3>
                 <span id="caixa">
                     <textarea name="caixa_comentario" id="caixa_comentario" cols="30" rows="10"></textarea>
-                    <button id="botao_comentario" type="submit">Comentar</button>
+                    <button id="post_comentario" type="submit">Comentar</button>
                 </span>
 
                 <span id="postar_comentario">
                     <div>
-                        <p id="post_coment">iji baboiii baboiii aaaaaah tatata bala tu bananaaaa chasy chasy hahaha.
-                            Poopayee tatata bala
+                        <p>iji baboiii baboiii aaaaaah tatata bala tu bananaaaa chasy chasy hahaha. Poopayee tatata bala
                             tu
                             ti aamoo! Poopayee. Bananaaaa me want bananaaa! Bee do bee do bee do chasy. Tulaliloo
                             tulaliloo
@@ -136,23 +133,13 @@
                         </p>
                     </div>
                     <hr>
-                    <p id="post_autor">Autor | Data</p>
+                    <p>Autor | Data e hora</p>
 
                 </span>
             </div>
         </section>
 
     </form>
-    <footer class="footer">
-        <div class="container">
-            <div>
-                <div>
-                    <p class="text-center">Made By Django</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
 </body>
 
 </html>
